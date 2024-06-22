@@ -194,12 +194,12 @@
         app:layout_constraintVertical_bias="0.073" />
 
     <ImageView
-        android:id="@+id/farmacia.pgn"
+        android:id="@+id/farmacia"
         android:layout_width="79dp"
         android:layout_height="79dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintHorizontal_bias="0.876"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.475"
@@ -211,10 +211,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="FARMACIA"
-        app:layout_constraintEnd_toEndOf="@+id/farmacia.pgn"
+        app:layout_constraintEnd_toEndOf="@+id/farmacia"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/farmacia.pgn"
-        app:layout_constraintTop_toBottomOf="@+id/farmacia.pgn"
+        app:layout_constraintStart_toStartOf="@+id/farmacia"
+        app:layout_constraintTop_toBottomOf="@+id/farmacia"
         tools:ignore="MissingConstraints" />
 
 

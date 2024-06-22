@@ -25,6 +25,9 @@ public class desarrollo extends AppCompatActivity {
             return insets;
         });
 
+        //botones de pantalla principal
+
+         //boton de pantallahostital
         ImageView hospitalImageView = findViewById(R.id.hospital);
         TextView hospitalTextView = findViewById(R.id.hostital);
 
@@ -44,6 +47,7 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
+        //boton de pantallahotel
         ImageView hotelImageView = findViewById(R.id.hotel);
         TextView hotelTextView = findViewById(R.id.hotel_text);
 
@@ -63,6 +67,7 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
+        //boton de pantallataxi
         ImageView taxiImageView = findViewById(R.id.taxi);
         TextView taxiTextView = findViewById(R.id.taxi_text);
 
@@ -82,18 +87,50 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
-        ImageView usuarioImageView = findViewById(R.id.cuenta);
-        TextView taxiTextView = findViewById(R.id.taxi_text);
+        //boton de pantallafarmacia
+        ImageView farmaciaImageView = findViewById(R.id.farmacia);
+        TextView farmaciaTextView = findViewById(R.id.FARnombre);
 
-        taxiImageView.setOnClickListener(new View.OnClickListener() {
+        farmaciaImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(desarrollo.this, pantallausuario.class);
+                Intent intent = new Intent(desarrollo.this, pantallafarmacia.class);
                 startActivity(intent);
             }
         });
 
-        taxiTextView.setOnClickListener(new View.OnClickListener() {
+        farmaciaTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, pantallafarmacia.class);
+                startActivity(intent);
+            }
+        });
+
+        //boton de Dpantallarestautante
+        ImageView restauranteImageView = findViewById(R.id.restaurante);
+        TextView restauranteTextView = findViewById(R.id.RESnombre);
+
+          restauranteImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, Dpantallarestautante.class);
+                startActivity(intent);
+            }
+        });
+
+        restauranteTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, Dpantallarestautante.class);
+                startActivity(intent);
+            }
+        });
+
+        //boton de Dpantallausuario
+        ImageView cuentaImageView = findViewById(R.id.cuenta);
+
+        cuentaImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(desarrollo.this, Dpantallausuario.class);
@@ -101,10 +138,11 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
-        ImageView taxiImageView = findViewById(R.id.taxi);
-        TextView taxiTextView = findViewById(R.id.taxi_text);
 
-        taxiImageView.setOnClickListener(new View.OnClickListener() {
+        //boton de notificacion
+        ImageView notificacionImageView = findViewById(R.id.notificacion);
+
+        notificacionImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(desarrollo.this, pantallanotificacion.class);
@@ -112,10 +150,13 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
-        taxiTextView.setOnClickListener(new View.OnClickListener() {
+        //boton de ubicacion
+        ImageView ubicacionImageView = findViewById(R.id.ubicacion);
+
+        ubicacionImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(desarrollo.this, pantallanotificacion.class);
+                Intent intent = new Intent(desarrollo.this, ubicacionpantalla.class);
                 startActivity(intent);
             }
         });
