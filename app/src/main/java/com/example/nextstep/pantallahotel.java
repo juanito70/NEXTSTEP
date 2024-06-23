@@ -40,7 +40,7 @@ public class pantallahotel extends AppCompatActivity implements OnMapReadyCallba
 
         try {
             // Inicializar Places API
-            Places.initialize(getApplicationContext(), "YOUR_API_KEY_HERE");
+            Places.initialize(getApplicationContext(), "AIzaSyCBJ3Mcabf4KAPlGJ-PJ3vd8l4lo7_itAs");
             placesClient = Places.createClient(this);
 
             fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);

@@ -8,6 +8,19 @@
     tools:context=".Dpantallausuario">
 
     <ImageView
+        android:id="@+id/usuario"
+        android:layout_width="55dp"
+        android:layout_height="58dp"
+        android:background="#373636"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.115"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112"
+        app:srcCompat="@drawable/usuario" />
+
+    <ImageView
         android:id="@+id/notificacion"
         android:layout_width="55dp"
         android:layout_height="58dp"
@@ -49,10 +62,10 @@
         android:text="Eliminar Cuenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <Button
         android:id="@+id/button2"
@@ -61,8 +74,98 @@
         android:text="cerrar sesion "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844" />
+        app:layout_constraintVertical_bias="0.819" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="253dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="JUAN FELIX LOPEZ ALVAREZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="242dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="nuevo chimbote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="HOLA JUAN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="NOMBRE COMPLETO"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        tools:layout_editor_absoluteX="79dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CORREO ELECTRONICO"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TELEFONO"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText5"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DIRRECCION"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        tools:layout_editor_absoluteX="80dp" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="253dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="juan@gmail.com"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="254dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="948277913"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="341dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

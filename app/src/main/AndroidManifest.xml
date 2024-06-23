@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Permisos necesarios para la aplicación -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -17,22 +16,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NEXTSTEP"
         tools:targetApi="31">
-
-        <!-- Metadatos para la clave API de Google Maps -->
+        <activity
+            android:name=".pantallanotificacion"
+            android:exported="true"
+            android:theme="@style/Theme.NEXTSTEP" />
+        <activity
+            android:name=".pantallafarmacia"
+            android:exported="true" /> <!-- Metadatos para la clave API de Google Maps -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCBJ3Mcabf4KAPlGJ-PJ3vd8l4lo7_itAs" />
-
-        <!-- Declaración de actividades -->
+            android:value="AIzaSyCBJ3Mcabf4KAPlGJ-PJ3vd8l4lo7_itAs" /> <!-- Declaración de actividades -->
         <activity
             android:name=".Dpantallarestautante"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Dpantallaayuda"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Dpantallausuario"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ubicacionpantalla"
             android:exported="true"
@@ -54,14 +56,13 @@
             android:exported="true" />
         <activity
             android:name=".pantallainicio"
-            android:exported="true" />
-
-        <!-- MainActivity con intent-filter para ser la actividad de inicio -->
+            android:exported="true" /> <!-- MainActivity con intent-filter para ser la actividad de inicio -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

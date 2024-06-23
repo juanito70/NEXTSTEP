@@ -27,7 +27,7 @@ import com.google.android.libraries.places.api.net.PlacesClient;
 
 import java.util.Arrays;
 
-public class Dpantallarestautante extends AppCompatActivity implements OnMapReadyCallback {
+public class pantallafarmacia extends AppCompatActivity implements OnMapReadyCallback {
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private GoogleMap mMap;
@@ -37,7 +37,7 @@ public class Dpantallarestautante extends AppCompatActivity implements OnMapRead
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantallahospital);
+        setContentView(R.layout.activity_pantallafarmacia);
 
         // Inicializar Places API
         Places.initialize(getApplicationContext(), "AIzaSyCBJ3Mcabf4KAPlGJ-PJ3vd8l4lo7_itAs");
@@ -78,8 +78,8 @@ public class Dpantallarestautante extends AppCompatActivity implements OnMapRead
                         LatLng currentLocation = new LatLng(location.getLatitude(), location.getLongitude());
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 15));
 
-                        // Buscar restaurantes cercanos
-                        findNearbyRestaurants(currentLocation);
+                        // Buscar hospitales cercanos
+                        findNearbyHospitals(currentLocation);
                     } else {
                         // Manejar el caso en que no se obtiene la ubicación
                         Toast.makeText(this, "No se pudo obtener la ubicación actual", Toast.LENGTH_SHORT).show();
@@ -91,7 +91,7 @@ public class Dpantallarestautante extends AppCompatActivity implements OnMapRead
         }
     }
 
-    private void findNearbyRestaurants(LatLng currentLocation) {
+    private void findNearbyHospitals(LatLng currentLocation) {
         // Configurar la solicitud de lugares
         FindCurrentPlaceRequest request = FindCurrentPlaceRequest.newInstance(Arrays.asList(
                 Place.Field.NAME, Place.Field.LAT_LNG));
@@ -100,11 +100,11 @@ public class Dpantallarestautante extends AppCompatActivity implements OnMapRead
             if (task.isSuccessful() && task.getResult() != null) {
                 for (PlaceLikelihood placeLikelihood : task.getResult().getPlaceLikelihoods()) {
                     Place place = placeLikelihood.getPlace();
-                    if (place.getTypes().contains(Place.Type.RESTAURANT)) {
-                        LatLng restaurantLocation = place.getLatLng();
-                        if (restaurantLocation != null) {
+                    if (place.getTypes().contains(Place.Type.HOSPITAL)) {
+                        LatLng hospitalLocation = place.getLatLng();
+                        if (hospitalLocation != null) {
                             mMap.addMarker(new MarkerOptions()
-                                    .position(restaurantLocation)
+                                    .position(hospitalLocation)
                                     .title(place.getName()));
                         }
                     }

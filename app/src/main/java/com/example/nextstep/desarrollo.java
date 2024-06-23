@@ -82,6 +82,43 @@ public class desarrollo extends AppCompatActivity {
             }
         });
 
+        ImageView usuarioImageView = findViewById(R.id.cuenta);
+        TextView taxiTextView = findViewById(R.id.taxi_text);
+
+        taxiImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, pantallausuario.class);
+                startActivity(intent);
+            }
+        });
+
+        taxiTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, Dpantallausuario.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView taxiImageView = findViewById(R.id.taxi);
+        TextView taxiTextView = findViewById(R.id.taxi_text);
+
+        taxiImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, pantallanotificacion.class);
+                startActivity(intent);
+            }
+        });
+
+        taxiTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(desarrollo.this, pantallanotificacion.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

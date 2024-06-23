@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -80,7 +81,7 @@ public class pantallahospital extends AppCompatActivity implements OnMapReadyCal
                         findNearbyHospitals(currentLocation);
                     } else {
                         // Manejar el caso en que no se obtiene la ubicación
-                        // Puedes mostrar un mensaje al usuario
+                        Toast.makeText(this, "No se pudo obtener la ubicación actual", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
