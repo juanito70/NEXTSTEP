@@ -40,21 +40,8 @@ public class pantallataxi extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    private boolean isAppInstalled(Context context, String packageName) {
-        PackageManager pm = context.getPackageManager();
-        try {
-            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
-            return true;
-        } catch (PackageManager.NameNotFoundException e) {
-            return false;
-        }
-
-
 
         ImageView notificacionImageView = findViewById(R.id.notificacion);
-
         notificacionImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,4 +70,15 @@ public class pantallataxi extends AppCompatActivity {
             }
         });
     }
+
+    private boolean isAppInstalled(Context context, String packageName) {
+        PackageManager pm = context.getPackageManager();
+        try {
+            pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+    }
+
 }
