@@ -9,11 +9,7 @@ import android.widget.ImageView;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class pantallataxi extends AppCompatActivity {
 
@@ -24,7 +20,7 @@ public class pantallataxi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button openTaxiMaximButton = findViewById(R.id.openTaxiMaximButton);
+        Button openTaxiMaximButton = findViewById(R.id.abrirtaxi);
         openTaxiMaximButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
